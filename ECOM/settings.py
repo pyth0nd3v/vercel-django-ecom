@@ -165,7 +165,7 @@ REST_FRAMEWORK = {
 
 }
 
-CORS_ORIGIN_WHITELIST = [    'http://localhost:3000', "http://127.0.0.1:3000",      ]
+CORS_ORIGIN_WHITELIST = [    'https://mujahid-ecom.netlify.app',  ]
 
-STATICFILES_DIRS = os.path.join(BASE_DIR, 'static')
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
+STATICFILES_DIRS = os.path.join(BASE_DIR, 'static',),
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static,')
