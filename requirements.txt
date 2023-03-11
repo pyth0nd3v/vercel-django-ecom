@@ -23,7 +23,6 @@ django-filter==22.1
 djangorestframework==3.14.0
 exceptiongroup==1.1.0
 httplib2==0.20.2
-idna==3.3
 importlib-metadata==4.6.4
 jeepney==0.7.1
 keyring==23.5.0
