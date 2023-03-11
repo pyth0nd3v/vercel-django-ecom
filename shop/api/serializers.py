@@ -47,7 +47,7 @@ class ItemSerializer(serializers.ModelSerializer):
         fields = ['id', 'item_name', 'item_desc', 'image_url', 'sub_category', 'item_price']
 
     def get_image_url(self, obj):
-        return 'http://127.0.0.1:8000' + obj.item_image.url
+        return 'https://pyth0nd3v.pythonanywhere.com' + obj.item_image.url
 
 #----------------- END Serializers for ItemView ----------------------
 
@@ -61,7 +61,7 @@ class ItemSerializer_category_nav(serializers.ModelSerializer):
         fields = ['item_name', 'image_url']
 
     def get_image_url(self, obj):
-        return 'http://127.0.0.1:8000' + obj.item_image.url
+        return 'https://pyth0nd3v.pythonanywhere.com' + obj.item_image.url
 
 
 class SubCategorySerializer_category_nav(serializers.ModelSerializer):
@@ -89,7 +89,7 @@ class ItemSerializer_Filter_Category(serializers.ModelSerializer):
         fields = ['id', 'item_name', 'image_url', 'item_price']
 
     def get_image_url(self, obj):
-        return 'http://127.0.0.1:8000' + obj.item_image.url
+        return 'https://pyth0nd3v.pythonanywhere.com' + obj.item_image.url
     
 
 class CategoryFilterSerializer(serializers.ModelSerializer):
