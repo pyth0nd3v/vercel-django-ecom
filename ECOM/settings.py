@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-wgvzh(aavf71i^9%z8w0iiy*_4f)rhlx4no4i2fgm-4kut%)fd'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app', 'https://mujahid-ecom.netlify.app/', 'mujahid-ecom.netlify.app']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -92,7 +92,12 @@ WSGI_APPLICATION = 'ECOM.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {} # Prevent Django from loading an adapter
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
 
 
 # Password validation
@@ -160,7 +165,7 @@ REST_FRAMEWORK = {
 
 }
 
-CORS_ORIGIN_WHITELIST = [    'https://mujahid-ecom.netlify.app/', ".vercel.app", 'mujahid-ecom.netlify.app'      ]
+CORS_ORIGIN_WHITELIST = [    'http://localhost:3000', "http://127.0.0.1:3000",      ]
 
 STATICFILES_DIRS = os.path.join(BASE_DIR, 'static')
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')

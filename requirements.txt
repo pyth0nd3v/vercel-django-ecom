@@ -1,8 +1,10 @@
+apturl==0.5.2
 asgiref==3.5.0
 async-generator==1.10
 attrs==22.2.0
 black==23.1.0
 blinker==1.4
+Brlapi==0.8.3
 certifi==2022.12.7
 chardet==4.0.0
 click==8.0.3
@@ -14,11 +16,14 @@ dbus-python==1.2.18
 defer==1.0.6
 distro==1.7.0
 distro-info===1.1build1
+dj-database-url==1.2.0
 Django==3.2.12
 django-cors-headers==3.14.0
 django-filter==22.1
+django-heroku==0.3.1
 djangorestframework==3.14.0
 exceptiongroup==1.1.0
+gunicorn==20.1.0
 gyp==0.1
 h11==0.14.0
 httplib2==0.20.2
