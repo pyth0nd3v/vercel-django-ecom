@@ -16,6 +16,11 @@ from .serializers import MessageSerializer, ItemSerializer,\
                                 SubCategorySerializer_category, CategorySerializer_nav
 from ..models import Message, Category, SubCategory, Item, Order
 
+class Index(APIView):
+    permission_classes = [AllowAny]
+    def get(self, request):
+        return Response("Hello Ecom User!")
+
 class MessageView(APIView):
     permission_classes = [AllowAny]
     
