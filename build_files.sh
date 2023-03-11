@@ -1,16 +1,19 @@
 #!/bin/bash
 
-# Install dependencies
+# Set the Python version
+export PYTHON_VERSION=3.10.6
+
+# Set the pip version
+export PIP_VERSION=22.0.2
+
+# Create a virtual environment
+python${PYTHON_VERSION} -m venv env
+
+# Activate the virtual environment
+source env/bin/activate
+
+# Upgrade pip to the specified version
+pip install --upgrade pip==${PIP_VERSION}
+
+# Install the packages from requirements.txt
 pip install -r requirements.txt
-
-# Build the application
-python manage.py build
-
-# Collect static files
-python manage.py collectstatic --noinput
-
-# Perform database migrations
-python manage.py migrate
-
-# Start the application server
-gunicorn ECOM.wsgi:application --bind 0.0.0.0:$PORT
