@@ -3,12 +3,10 @@ async-generator==1.10
 attrs==22.2.0
 black==23.1.0
 blinker==1.4
-Brlapi==0.8.3
 certifi==2022.12.7
 chardet==4.0.0
 click==8.0.3
 colorama==0.4.4
-command-not-found==0.3
 cryptography==3.4.8
 cupshelpers==1.0
 dbus-python==1.2.18
