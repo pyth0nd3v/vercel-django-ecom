@@ -15,8 +15,6 @@ django-cors-headers==3.14.0
 django-filter==22.1
 djangorestframework==3.14.0
 exceptiongroup==1.1.0
-gyp==0.1
-h11==0.14.0
 httplib2==0.20.2
 idna==3.3
 importlib-metadata==4.6.4
