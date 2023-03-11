@@ -3,6 +3,9 @@
 # Install dependencies
 pip install -r requirements.txt
 
+# Build the application
+python manage.py build
+
 # Collect static files
 python manage.py collectstatic --noinput
 
