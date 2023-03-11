@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-wgvzh(aavf71i^9%z8w0iiy*_4f)rhlx4no4i2fgm-4kut%)fd'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['.vercel.app', 'https://mujahid-ecom.netlify.app/', 'mujahid-ecom.netlify.app']
 

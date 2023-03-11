@@ -1,13 +1,21 @@
 {
-    "builds": [{
-        "src": "ECOM/wsgi.py",
-        "use": "@ardnt/vercel-python-wsgi",
-        "config": { "maxLambdaSize": "15mb" }
-    }],
+    "version": 2,
+    "builds": [
+      {
+        "src": "manage.py",
+        "use": "@vercel/python"
+      }
+    ],
     "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "ECOM/wsgi.py"
-        }
-    ]
-}
+      {
+        "src": "/(.*)",
+        "dest": "/manage.py"
+      }
+    ],
+    "env": {
+      "VERCEL_ENV": "production",
+      "PYTHONUNBUFFERED": "1",
+      "DJANGO_SETTINGS_MODULE": "ECOM.settings"
+    }
+  }
+  
