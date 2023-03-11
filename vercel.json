@@ -1,21 +1,14 @@
 {
-    "version": 2,
     "builds": [
       {
-        "src": ".",
+        "src": "ECOM/wsgi.py",
         "use": "@vercel/python"
       }
     ],
     "routes": [
       {
         "src": "/(.*)",
-        "dest": "ECOM.wsgi:application"
+        "dest": "ECOM/wsgi.py"
       }
-    ],
-    "env": {
-      "VERCEL_ENV": "production",
-      "PYTHONUNBUFFERED": "1",
-      "DJANGO_SETTINGS_MODULE": "ECOM.settings"
-    }
+    ]
   }
-  
